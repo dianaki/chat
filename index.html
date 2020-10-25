@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chat</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+</head>
+
+<body>
+
+  <div class="auth show">
+    <div class="auth-container">
+      <div class="auth__icon">
+        <img src="img/auth-icon.png" alt="Иконка авторизации">
+      </div>
+      <h1 class="auth__title">Авторизация</h1>
+      <span class="auth__subtitle">Введите пожалуйста своё фио и ник для дальнейшей авторизации</span>
+      <form action="#" class="auth-form">
+        <input type="text" class="auth__input auth__name" placeholder="Введите ФИО">
+        <input type="text" class="auth__input auth__nick" placeholder="Введите свой ник">
+        <button class="auth__button">ВОЙТИ</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="photo hide">
+    <div class="photo-container">
+      <div class="photo-wrap">
+        <img src="" id="loadingAvatar" alt="">
+      </div>
+      <span class="photo__subtitle">Область для профильной фотографии</span>
+      <form action="#" class="photo-form">
+        <button class="photo__button" id="photo__cancel">отмена</button>
+        <button class="photo__button" id="photo__save">сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <main class="global hide">
+    <div class="global-user user">
+      <div class="user-info">
+        <label for="user__photo">
+          <div class="user__avatar">
+            <div class="user__avatar_download">
+              <i class="fas fa-cloud-download-alt"></i>
+            </div>
+            <img src="" alt="аватар">
+          </div>
+        </label>
+        <input type="file" class="user__photo" id="user__photo" name="user__photo">
+        <div class="user__wrap">
+          <div class="user__name"></div>
+          <div class="user__nick"></div>
+        </div>
+      </div>
+      <div class="user-online__subtitle">Online (<span class="user-online__number"></span>)</div>
+      <div class="user-online"></div>
+    </div>
+
+    <div class="global-message message">
+      <div class="message-container"></div>
+      <form action="#" class="message-form">
+        <input type="text" class="message__input" placeholder="Введите сообщение..." autocomplete="off">
+        <button class="message__button">Отправить</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/main.js" type="module"></script>
+
+  <script id="userOnlineTemplate" type="text/template">
+        <div class="user__avatar user-online__avatar" data-nick={{nick}}>
+            <img src="{{photo}}" alt="аватар">
+        </div>
+        <div class="user__wrap">
+            <div class="user__name user-online__name">{{name}}</div>
+            <div class="user__nick">{{nick}}</div>
+        </div>
+    </script>
+
+  <script id="messageTemplate" type="text/template">
+        <div class="user__avatar message-item__avatar" data-nick={{nick}}>
+            <img src="{{photo}}" alt="аватар">
+        </div>
+        <div class="message-item__content">
+            <div class="message-item__info">
+                <span class="message-item__nick">{{nick}}</span>
+                <span class="message-item__time">{{time}}</span>
+            </div>
+            <div class="message-item__text">{{messageText}}</div>
+        </div>
+    </script>
+
+</body>
+
+</html>

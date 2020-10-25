@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,500&display=swap&subset=cyrillic");
+@import url("../css/layout/normalize.css");
+@import url("../css/layout/base.css");
+@import url("../css/blocks/auth.css");
+@import url("../css/blocks/global.css");
+@import url("../css/blocks/message.css");
+@import url("../css/blocks/photo.css");
+@import url("../css/blocks/user.css");

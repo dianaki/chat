@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+button :hover {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+input ::placeholder {
+  color: #858e97;
+  font-weight: 300;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}

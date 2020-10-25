@@ -1,0 +1,105 @@
+.user {
+  color: #ffffff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.user__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 87px;
+  height: 87px;
+  background-color: #242f3d;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.user__avatar_download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 87px;
+  width: 87px;
+  opacity: 0;
+  background-color: #5288c1;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: all 0.2s ease-out 0.1s;
+}
+
+.user__avatar:hover .user__avatar_download {
+  opacity: 1;
+}
+
+.user__name {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.user__nick {
+  color: #7f91a4;
+}
+
+.user__photo {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.user__button {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #5288c1;
+  border-radius: 10px;
+}
+
+.user__button:hover {
+  background-color: #202e3c;
+}
+
+.user-online {
+  border-bottom: 0px;
+  font-size: 14px;
+}
+
+.user-online__subtitle {
+  padding: 15px;
+  padding-left: 30px;
+  font-size: 16px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.user-online__avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.user-online__name {
+  margin-bottom: 5px;
+}
+
+.user_online {
+  padding: 10px 20px;
+}
+
+label {
+  cursor: pointer;
+}
